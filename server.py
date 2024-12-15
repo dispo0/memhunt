@@ -17,12 +17,12 @@ def webhook():
     json_str = request.get_data().decode('UTF-8')
     update = telebot.types.Update.de_json(json_str)
     bot.process_new_updates([update])
-    return '', 200
+    return jsonify({"status": "ok"}), 200
+
 
 # Запуск сервера
 if __name__ == '__main__':
-    import os
-
-    PORT = int(os.environ.get('PORT', 5000))
+    PORT = int(os.environ.get('PORT', 5000))  # Поддержка переменной PORT на Railway
     app.run(host='0.0.0.0', port=PORT, debug=True)
+
 
