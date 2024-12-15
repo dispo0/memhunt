@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemHunt - Мини-Приложение</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f3f4f6;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать в MemHunt!</h1>
+    <p>Здесь ты можешь фармить карты мемов и торговать ими!</p>
+
+    <div class="container">
+        <button class="button" id="tradeCards">Торговля картами</button>
+        <button class="button" id="viewCollection">Моя коллекция</button>
+        <button class="button" id="checkBalance">Проверить баланс</button>
+    </div>
+
+    <script>
+        // Обработчики событий для кнопок
+        document.getElementById('tradeCards').addEventListener('click', function() {
+            alert("Торговля картами");
+        });
+        document.getElementById('viewCollection').addEventListener('click', function() {
+            alert("Просмотр коллекции карт");
+        });
+        document.getElementById('checkBalance').addEventListener('click', function() {
+            alert("Твой баланс: 100 мемных очков");
+        });
+    </script>
+</body>
+</html>
